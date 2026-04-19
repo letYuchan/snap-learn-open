@@ -35,6 +35,23 @@ AI 도우미 덕에 **결과는 빨라졌는데**, 정작 **왜 그렇게 동작
 
 ---
 
+## How it works
+
+```mermaid
+flowchart LR
+  A[Claude Code 세션] --> B[백그라운드 감시<br/>delta tail]
+  B --> C[핵심 개념 추출]
+  C --> D[학습 노트 생성<br/>퀴즈 · 다이어그램]
+  D --> E[30초 팝업]
+  E --> F[로컬 라이브러리]
+  F --> G{선택}
+  G --> H[면접 연습]
+  G --> I[Notion 동기화]
+  G --> J[AI 분석 리포트]
+```
+
+---
+
 ## Install
 
 1. **[DMG 다운로드](https://github.com/letYuchan/snap-learn-open/releases/latest)** → `Snap Learn.app` 을 `/Applications` 로 드래그

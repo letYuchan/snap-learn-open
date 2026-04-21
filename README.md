@@ -2,15 +2,16 @@
 
 # Snap Learn
 
-**Claude Code 로 만든 걸 잊기 전에, 개념부터 다시 잡는다.**
+**Claude · Codex 로 만든 걸 잊기 전에, 개념부터 다시 잡는다.**
 
-macOS 앱 · 백그라운드에서 세션을 감시해 놓친 개념을 빠르게 훑고 넘어갈 학습 카드로 복원합니다.
+macOS 앱 · 백그라운드에서 Claude 또는 Codex 세션을 감시해 놓친 개념을 빠르게 훑고 넘어갈 학습 카드로 복원합니다.
 
 [Download DMG](https://github.com/letYuchan/snap-learn-open/releases/latest) · [Features](#features) · [Install](#install) · [Privacy](#privacy)
 
 ![macOS](https://img.shields.io/badge/macOS-Apple%20Silicon-black?style=flat-square)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
 ![Stage](https://img.shields.io/badge/Stage-Alpha-orange?style=flat-square)
+![Version](https://img.shields.io/badge/Version-0.3.0-111827?style=flat-square)
 
 </div>
 
@@ -27,6 +28,7 @@ AI 도우미 덕에 **결과는 빨라졌는데**, 정작 **왜 그렇게 동작
 | | |
 |---|---|
 | 🔎 **자동 감시** | 세션 델타 tail → 의미 있는 순간에 가벼운 팝업 한 장 |
+| 🔀 **CLI 선택** | 감시는 Claude/Codex 중 선택, 학습·뉴스 모델도 기능별로 분리 설정 |
 | 🎙 **면접 연습** | 1문1답 10회 티키타카 · 4축(정확성·깊이·트레이드오프·명료성) 채점 |
 | 📚 **코어·트렌드** | Kleppmann 급 기초 + 최근 1~2년 실전 주제 자동 큐레이션 |
 | 🗞 **뉴스 디지스트** | 관심사 기반 데일리, 1차 출처 우선 |
@@ -39,7 +41,7 @@ AI 도우미 덕에 **결과는 빨라졌는데**, 정작 **왜 그렇게 동작
 
 ```mermaid
 flowchart LR
-  A[Claude Code 세션] --> B[백그라운드 감시<br/>delta tail]
+  A[Claude 또는 Codex 세션] --> B[백그라운드 감시<br/>delta tail]
   B --> C[핵심 개념 추출]
   C --> D[학습 노트 생성<br/>퀴즈 · 다이어그램]
   D --> E[가벼운 팝업]
@@ -55,10 +57,13 @@ flowchart LR
 ## Install
 
 1. **[DMG 다운로드](https://github.com/letYuchan/snap-learn-open/releases/latest)** → `Snap Learn.app` 을 `/Applications` 로 드래그
-2. **Claude CLI 로그인** (별도 API 키 불필요)
+2. **Claude 또는 Codex CLI 준비** (기능별 선택 가능, 별도 API 키 불필요)
    ```bash
    brew install anthropic/tap/claude
    claude login
+
+   npm i -g @openai/codex
+   codex login
    ```
 3. 앱 실행 → 온보딩이 권한·저장 폴더 안내
 
@@ -77,7 +82,7 @@ flowchart LR
 
 ## Stack
 
-Tauri 2 · React 18 · TypeScript 5 · Tailwind 4 · TanStack Query · Zustand · Claude CLI
+Tauri 2 · React 18 · TypeScript 5 · Tailwind 4 · TanStack Query · Zustand · Claude CLI · Codex CLI
 
 ---
 

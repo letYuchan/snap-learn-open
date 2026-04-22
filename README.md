@@ -11,7 +11,7 @@ macOS 앱 · 백그라운드에서 Claude 또는 Codex 세션을 감시해 놓�
 ![macOS](https://img.shields.io/badge/macOS-Apple%20Silicon-black?style=flat-square)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
 ![Stage](https://img.shields.io/badge/Stage-Alpha-orange?style=flat-square)
-![Version](https://img.shields.io/badge/Version-0.3.0-111827?style=flat-square)
+![Version](https://img.shields.io/badge/Version-0.3.1-111827?style=flat-square)
 
 </div>
 
@@ -28,7 +28,7 @@ AI 도우미 덕에 **결과는 빨라졌는데**, 정작 **왜 그렇게 동작
 | | |
 |---|---|
 | 🔎 **자동 감시** | 세션 델타 tail → 의미 있는 순간에 가벼운 팝업 한 장 |
-| 🔀 **CLI 선택** | 감시는 Claude/Codex 중 선택, 학습·뉴스 모델도 기능별로 분리 설정 |
+| 🔀 **Provider 전환** | 상단에서 Claude/Codex 중 현재 사용할 AI 선택, 아래에는 두 provider 모델 프리셋을 함께 저장 |
 | 🎙 **면접 연습** | 1문1답 10회 티키타카 · 4축(정확성·깊이·트레이드오프·명료성) 채점 |
 | 📚 **코어·트렌드** | Kleppmann 급 기초 + 최근 1~2년 실전 주제 자동 큐레이션 |
 | 🗞 **뉴스 디지스트** | 관심사 기반 데일리, 1차 출처 우선 |
